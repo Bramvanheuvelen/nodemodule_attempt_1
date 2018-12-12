@@ -1,0 +1,89 @@
+@import '../shared/_colors';
+@import '../shared/_fonts';
+@import '../shared/_mediabreakpoints';
+
+h1,h2,h3 {
+    margin-bottom: 2.4rem;
+}
+h4, h5 {
+    margin-bottom: 1.6rem;
+}
+
+// Heading 1
+h1, .h1 {
+    font-family: KLMNoa-Light;
+    font-weight: 300;
+    color: $klm-blue;
+    font-size: 4.8rem;
+    letter-spacing: -0.1rem;
+
+    // desktop variant, based on _mediabreakpoints
+    @media(min-width: $xlarge) {
+        font-size: 6rem;
+        letter-spacing: -0.12rem;
+    }
+}
+
+// Heading 2
+h2, .h2 {
+    font-family: KLMNoa-Light;
+    font-weight: 300;
+    color: $klm-blue;
+    font-size: 3.6rem;
+    letter-spacing: -0.07rem;
+
+    // desktop variant, based on _mediabreakpoints
+    @media(min-width: $xlarge) {
+        font-size: 4.8rem;
+        letter-spacing: -0.1rem;
+    }
+}
+
+// Heading 3
+h3, .h3 {
+    font-family: San_Francisco_Display_Regular;
+    font-weight: 500;
+    color: $klm-darker-grey;
+    font-size: 2.4rem;
+    letter-spacing: -0.05rem;
+}
+
+// Heading 4
+h4, .h4 {
+    font-family: San_Francisco_Display_Regular;
+    font-weight: 500;
+    color: $klm-darker-grey;
+    font-size: 2rem;
+    letter-spacing: -0.04rem;
+}
+
+// Heading 5
+h5, .h5 {
+    font-family: San_Francisco_Display_Regular;
+    font-weight: 600;
+    color: $klm-darker-grey;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+}
+
+.text-body {
+    color: $klm-darker-grey;
+    letter-spacing: 0;
+    font-size: 1.6rem;
+    font-weight: regular;
+
+    &--large {
+        font-size: 2.4rem;
+    }
+
+    &--small {
+        font-size: 1.4rem;
+        color: $klm-dark-grey;
+    }
+
+    &--button {
+        font-weight: 600;
+        letter-spacing: 0.04rem;
+        color: $klm-accessible-blue;
+    }
+}

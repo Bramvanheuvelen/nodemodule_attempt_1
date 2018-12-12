@@ -1,0 +1,86 @@
+@import '../shared/_colors';
+
+.kl-dialog {
+    transition: opacity .4s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.kl-dialog-link {
+    color: $klm-blue;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.kl-dialog-checkbox {
+    display: none;
+}
+
+.kl-dialog-checkbox:checked + .kl-dialog {
+    opacity: 1;
+    visibility: visible;
+}
+
+.kl-dialog-overlay-close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100;
+}
+
+.kl-dialog-content {
+    background-color: white;
+    padding: 2rem;
+    width: 50rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.kl-dialog-title {
+    color: $klm-blue;
+    font-family: NoaLTPro-Light, sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.kl-dialog-buttons {
+    padding-top: 1.8rem;
+    text-align: center;
+
+    button, label {
+        margin-left: 1rem;
+    }
+}
+
+.kl-dialog-close {
+    padding-top: 1.1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}

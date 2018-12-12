@@ -1,0 +1,154 @@
+@import '../shared/_colors';
+
+.kl-form {
+
+  &__item {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  // &__icon {
+  //   margin-right: 0.8rem;
+  // }
+
+  // Input item
+  &__input {
+    background-color: $klm-lighter-grey;
+    background-position: 99%; // set this here to prevent funky animations with {transition: 0.2s} see: klm-form__input--error
+    border: 1px solid $klm-medium-grey;
+    border-radius: 0.4rem;
+    flex: 1;
+    width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1.4rem;
+      color: $klm-dark-grey;
+      margin-right: 0.4rem;
+      padding-top: 0.8rem;
+      padding-bottom: 0.4rem;
+    }
+
+    input, textarea {
+      border: 0;
+      background: none;
+      font-size: 1.4rem;
+      padding-bottom: 1.2rem;
+      padding-top: 1.6rem;
+      margin-top: -1.6rem;
+      flex: 1;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    &:hover {
+      border-color: $klm-dark-grey;
+      label {
+        color: $klm-dark-grey;
+      }
+    }
+
+    &:focus, &:active, &:focus-within {
+      border-color: $klm-blue;
+
+      label {
+        color: $klm-accessible-blue;
+      }
+    }
+
+    // or when the form item is invalid?
+    &--error, &--error:focus, &--error:active, &--error:hover, &--error:focus-within {
+      border-color: $klm-red;
+      background-image: url('../icons/form-error.svg');
+      background-repeat: no-repeat;
+
+      label {
+        color: $klm-red,
+      }
+    }
+  }
+  // end of __input
+
+  // <Select> / Dropdown menu
+  &__dropdown {
+
+    background-color: $klm-lighter-grey;
+    background-position: 99%; // set this here to prevent funky animations with {transition: 0.2s} see: klm-form__input--error
+    border: 1px solid $klm-medium-grey;
+    border-radius: 4px;
+    flex: 1;
+    padding-left: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url('../icons/chevron-down.svg');
+    background-repeat: no-repeat;
+
+    label {
+      font-size: 1.4rem;
+      color: $klm-dark-grey;
+      margin-right: 0.4rem;
+      padding-top: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-top: 1.6rem;
+      margin-top: -1.6rem;
+      padding-bottom: 0.8rem;
+      font-size: 1.4rem;
+
+      background: none;
+      border: 0;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    option {
+      font-size: 1.4rem;
+    }
+
+
+    // What happens when we focus or hover an input field?
+    &:hover {
+      border-color: $klm-dark-grey;
+      label {
+        color: $klm-dark-grey;
+      }
+    }
+
+    &:focus, &:active, &:focus-within {
+      border-color: $klm-blue;
+      background-image: url('../icons/chevron-down-blue.svg');
+
+      label {
+        color: $klm-accessible-blue;
+      }
+    }
+
+    // or when the form item is invalid?
+    &--error, &--error:focus, &--error:active, &--error:hover, &--error:focus-within {
+      border-color: $klm-red;
+      background-image: url('../icons/form-error.svg');
+      background-repeat: no-repeat;
+
+      label {
+        color: $klm-red,
+      }
+    }
+  }
+
+}

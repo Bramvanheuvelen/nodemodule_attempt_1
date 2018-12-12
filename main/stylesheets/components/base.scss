@@ -1,0 +1,39 @@
+@import '../shared/_colors';
+@import '../shared/_fonts';
+@import '../shared/mediabreakpoints';
+
+//Reset margin and padding for all HTML elements to 0
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px; //declare 10 here to make 1rem equal to 10px
+}
+
+body {
+  font-family: San_Francisco_Text_Medium, sans-serif;
+  font-size: 16px; // declare 16 here, because 16px is a proper browserdefault. After this we'll be working with REM.
+  font-size: 1.6rem;
+  color: $klm-night-blue;
+  background-color: $klm-lighter-grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+hr.divider {
+  margin: 1.5rem 0;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid $klm-cloudy-blue;
+  background: transparent;
+}

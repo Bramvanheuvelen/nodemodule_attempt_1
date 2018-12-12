@@ -1,0 +1,91 @@
+@import '../shared/_colors';
+@import '../shared/_shadows';
+
+.kl-button {
+
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.4px;
+    transition: all .2s;
+    padding: 1.2rem 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &--primary {
+        background-color: $klm-accessible-blue;
+        border: 1px solid $klm-accessible-blue;
+        color: $klm-white;
+        box-shadow: $shadow-2;
+
+        &:focus, &:hover {
+            box-shadow: none;
+        }
+
+        &:active {
+            box-shadow: none;
+            background-color: darken($klm-accessible-blue, 5%);
+            border-color: darken($klm-accessible-blue, 5%);
+        }
+
+        &:disabled, &.disabled {
+            box-shadow: none;
+            background-color: $klm-light-grey;
+            border-color: $klm-light-grey;
+            color: $klm-medium-grey;
+            cursor: default
+        }
+    }
+
+    &--secondary {
+        background-color: $klm-white;
+        border: 1px solid $klm-cloudy-blue;
+        color: $klm-accessible-blue;
+
+        &:focus, &:hover {
+            background-color: lighten($klm-cloudy-blue, 10%);
+        }
+
+        &:active {
+            background-color: $klm-light-grey;
+        }
+
+        &:disabled, &.disabled {
+
+            background-color: $klm-white;
+            border-color: $klm-medium-grey;
+            color: $klm-medium-grey;
+            cursor: default
+        }
+    }
+
+    &--text {
+        border: 0;
+        background-color: rgba($klm-white, 0);
+        color: $klm-accessible-blue;
+
+        &:focus, &:hover {
+            background-color: lighten($klm-cloudy-blue, 10%);
+        }
+
+        &:active {
+            background-color: $klm-light-grey;
+        }
+
+        &:disabled, &.disabled {
+            background-color: rgba($klm-white, 0);
+            color: $klm-medium-grey;
+            cursor: default
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+}
